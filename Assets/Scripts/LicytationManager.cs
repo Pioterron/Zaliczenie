@@ -100,9 +100,18 @@ public class LicytationManager : MonoBehaviour
         canChangeState = false;
         isNextButton = false;
         yield return new WaitUntil(() => isNextButton == true);
-        if (inputField.text != "" && inputPrice >= tempPrice)
+        if (inputField.text != "")
         {
             inputPrice = float.Parse(inputField.text);
+        }
+        else
+        {
+            inputPrice = 0.0f;
+        }
+        Debug.Log("inputPrice AAA" + inputPrice);
+        if (inputField.text != "" && inputPrice >= tempPrice)
+        {
+            Debug.Log("EverythingIsCorrect AAA");
             tempPrice = inputPrice;
             playerWon = true;
         }
