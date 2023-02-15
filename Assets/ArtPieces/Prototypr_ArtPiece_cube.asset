@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71108e91491989458ac1f441f0f117c, type: 3}
+  m_Name: Prototypr_ArtPiece_cube
+  m_EditorClassIdentifier: 
+  price: 100
+  artPieceName: TestCube
+  model3D: {fileID: 1966704870176032293, guid: 6c166ff366d8cee4c8e81df1872a75b6, type: 3}
+  grafika2D: {fileID: 21300000, guid: 38236a82ff44aaa4b972248479d5f970, type: 3}
