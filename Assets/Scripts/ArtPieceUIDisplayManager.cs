@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ArtPieceUIDisplayManager : MonoBehaviour
 {
-    //singleton
-    //selects 5 random ArtPieces to diplay
-    //selects 3 random art pieces to parse to next scene
-    //displays ArtPice in UI
     public static ArtPieceUIDisplayManager instance;
+
     [SerializeField] SC_ArtPiece[] artPieceArray;
     private SC_ArtPiece[] artPiecesInspection;
     public SC_ArtPiece[] artPiecesLicytation { get; private set; }
+
     [SerializeField] private int isnspectionArrayLenght;
     [SerializeField] private int licytationArrayLenght;
 
@@ -67,12 +66,9 @@ public class ArtPieceUIDisplayManager : MonoBehaviour
             newDisplay.GetComponentInChildren<TMP_Text>().text = artPiece.ArtPieceName;
             foreach (Transform child in newDisplay.transform)
             {
-                if (child.gameObject.name  == "Display3D")
+                if(child.gameObject.name == "DisplayImage")
                 {
-                    GameObject new3DModel = Instantiate(artPiece.Model3d, child.gameObject.transform);
-                    new3DModel.layer = 5;
-                    new3DModel.transform.localPosition = (new Vector3( 0,0,0));
-                    new3DModel.transform.localScale *= 40;
+                    child.GetComponent<Image>().sprite = artPiece.Grafika2d;
                 }
             }
         }

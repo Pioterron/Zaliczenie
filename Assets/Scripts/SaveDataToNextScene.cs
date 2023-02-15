@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveDataToNextScene : MonoBehaviour
 {
@@ -16,5 +17,9 @@ public class SaveDataToNextScene : MonoBehaviour
     private void Update()
     {
         artPiecesLicytation = ArtPieceUIDisplayManager.artPiecesLicytation;
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            Destroy(gameObject);
+        }
     }
 }
